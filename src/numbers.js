@@ -1,22 +1,16 @@
 const add = (a, b) => {
-  // your code here
+  return a + b;
 };
 
 const subtract = (a, b) => {
-  // your code here
+  return a - b;
 };
 
-const multiply = (a, b) => {
-  // your code here
-};
+const multiply = (a, b) => a * b;
 
-const divide = (a, b) => {
-  // your code here
-};
+const divide = (a, b) => a / b;
 
-const power = (a, b) => {
-  // your code here
-};
+const power = (a, b) => a ** b;
 
 const round = (a) => {
   // your code here
