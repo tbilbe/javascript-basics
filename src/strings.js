@@ -1,10 +1,8 @@
 const sayHello = (string) => {
-  // your code here
-};
+  return 'Hello, ' + string.toString() + '!'
+}
 
-const uppercase = (string) => {
-  // your code here
-};
+const uppercase = (string) => string.toUpperCase();
 
 const lowercase = (string) => {
   // your code here
