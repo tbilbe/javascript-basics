@@ -4,19 +4,13 @@ const sayHello = (string) => {
 
 const uppercase = (string) => string.toUpperCase();
 
-const lowercase = (string) => {
-  return string.toLowerCase();
-};
+const lowercase = (string) => string.toLowerCase();
 
 const countCharacters = (string) => string.length;
 
-const firstCharacter = (string) => {
-  return string[0];
-};
+const firstCharacter = (string) => string[0];
 
-const firstCharacters = (string, n) => {
-  return string.substr(0, n);
-};
+const firstCharacters = (string, n) => string.substr(0, n);
 
 module.exports = {
   sayHello,
