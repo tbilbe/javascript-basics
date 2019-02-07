@@ -5,19 +5,17 @@ const sayHello = (string) => {
 const uppercase = (string) => string.toUpperCase();
 
 const lowercase = (string) => {
-  // your code here
+  return string.toLowerCase();
 };
 
-const countCharacters = (string) => {
-  // your code here
-};
+const countCharacters = (string) => string.length;
 
 const firstCharacter = (string) => {
-  // your code here
+  return string[0];
 };
 
 const firstCharacters = (string, n) => {
-  // your code here
+  return string.substr(0, n);
 };
 
 module.exports = {
