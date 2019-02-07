@@ -6,27 +6,26 @@ const either = (a, b) => {
   return a || b;
 }
 
-const none = (a, b) => !a && !b;
-
+const none = (a, b) => {
+  return !a && !b;
+}
 const one = (a, b) => {
-  // your code here
+  if (a && !b) {
+    return true;
+  } else if (!a && b) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
-const truthiness = (a) => {
-  // your code here
-};
+const truthiness = (a) => a ? true : false;
 
-const isEqual = (a, b) => {
-  // your code here
-};
+const isEqual = (a, b) => a === b;
 
-const isGreaterThan = (a, b) => {
-  // your code here
-};
+const isGreaterThan = (a, b) => a > b;
 
-const isLessThanOrEqualTo = (a, b) => {
-  // your code here
-};
+const isLessThanOrEqualTo = (a, b) => a <= b;
 
 const isOdd = (a) => {
   // your code here

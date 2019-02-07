@@ -51,7 +51,7 @@ describe('none', () => {
 });
 
 describe('one', () => {
-  xit('returns true if exactly one of the given values are true', () => {
+  it('returns true if exactly one of the given values are true', () => {
     expect(one(true, true)).toBe(false);
     expect(one(true, false)).toBe(true);
     expect(one(false, true)).toBe(true);
@@ -60,7 +60,7 @@ describe('one', () => {
 });
 
 describe('truthiness', () => {
-  xit('returns the truthiness of the given value', () => {
+  it('returns the truthiness of the given value', () => {
     expect(truthiness('')).toBe(false);
     expect(truthiness('dbbd')).toBe(true);
     expect(truthiness(0)).toBe(false);
@@ -74,7 +74,7 @@ describe('truthiness', () => {
 });
 
 describe('isEqual', () => {
-  xit('returns whether the two values are even', () => {
+  it('returns whether the two values are even', () => {
     expect(isEqual(true, false)).toBe(false);
     expect(isEqual(true, true)).toBe(true);
     expect(isEqual('true', 'true')).toBe(true);
@@ -85,7 +85,7 @@ describe('isEqual', () => {
 });
 
 describe('isGreaterThan', () => {
-  xit('returns true if the first number is strictly greater than the second', () => {
+  it('returns true if the first number is strictly greater than the second', () => {
     expect(isGreaterThan(1, 2)).toBe(false);
     expect(isGreaterThan(3, 2)).toBe(true);
     expect(isGreaterThan(4, 4)).toBe(false);
@@ -93,7 +93,7 @@ describe('isGreaterThan', () => {
 });
 
 describe('isLessThanOrEqualTo', () => {
-  xit('returns true if the first number is less than or equal to the second', () => {
+  it('returns true if the first number is less than or equal to the second', () => {
     expect(isLessThanOrEqualTo(1, 2)).toBe(true);
     expect(isLessThanOrEqualTo(3, 2)).toBe(false);
     expect(isLessThanOrEqualTo(4, 4)).toBe(true);
