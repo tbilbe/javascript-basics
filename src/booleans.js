@@ -27,30 +27,48 @@ const isGreaterThan = (a, b) => a > b;
 
 const isLessThanOrEqualTo = (a, b) => a <= b;
 
-const isOdd = (a) => {
-  // your code here
-};
+const isOdd = (a) => a % 2 === 1;
 
-const isEven = (a) => {
-  // your code here
-};
+const isEven = (a) => a % 2 === 0;
 
 const isSquare = (a) => {
-  // your code here
+  let total;
+  let iterator = 0;
+  do {
+    total = iterator ** 2;
+    iterator++;
+    if (total === a) {
+      return true;
+    }
+  } while (total < a) 
+  return false;
 };
 
-const startsWith = (char, string) => {
-  // your code here
-};
+const startsWith = (char, string) => string[0] === char;
 
 const containsVowels = (string) => {
-  // your code here
+  const vowels = ['a', 'e', 'i', 'o', 'u']
+  for (let i = 0; i < string.length; i++) {
+    for (let n = 0; n < vowels.length; n++) {
+      if (string[i].toLowerCase() === vowels[n]) {
+        return true;
+      }
+    }
+  }
+  return false;
 };
 
 const isLowerCase = (string) => {
-  // your code here
+  for (let i = 0; i < string.length; i++) {
+    //console.log(string.charCodeAt(1);
+    if (string.charCodeAt(i) > 64 && string.charCodeAt(i) < 91) {
+      return false;
+    }
+  }
+  return true;
 };
 
+//isLowerCase('Abc')
 module.exports = {
   negate,
   both,
