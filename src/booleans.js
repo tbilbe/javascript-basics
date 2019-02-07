@@ -27,19 +27,11 @@ const isEqual = (a, b) => {
 };
 
 const isGreaterThan = (a, b) => {
-  if (a > b) {
-    return true;
-  } else {
-    return false;
-  }
+  return a > b;
 };
 
 const isLessThanOrEqualTo = (a, b) => {
-  if (a <= b) {
-    return true;
-  } else {
-    return false;
-  }
+  return a <= b;
 };
 
 const isOdd = (a) => {
@@ -69,15 +61,30 @@ const isSquare = (a) => {
 };
 
 const startsWith = (char, string) => {
-  // your code here
+  return string.charAt(0) === char;
 };
 
 const containsVowels = (string) => {
-  // your code here
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+    for (let i = 0; i < vowels.length; i++) { 
+      if ( string.toLowerCase().includes(vowels[i]) ) {
+        return true;
+      }
+  }
+    return false;
 };
 
 const isLowerCase = (string) => {
-  // your code here
+  //this will return true;
+  return string === string.toLowerCase();
+
+  //the below is too much:
+  // if (string === string.toLowerCase()) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
 };
 
 module.exports = {
