@@ -3,12 +3,10 @@ const negate = (a) => !a;
 const both = (a, b) => a && b;
 
 const either = (a, b) => {
-
+  return a || b;
 }
 
-const none = (a, b) => {
-  // your code here
-};
+const none = (a, b) => !a && !b;
 
 const one = (a, b) => {
   // your code here

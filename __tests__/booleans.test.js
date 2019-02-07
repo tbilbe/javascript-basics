@@ -42,7 +42,7 @@ describe('either', () => {
 });
 
 describe('none', () => {
-  xit('returns true if neither of the given values are true', () => {
+  it('returns true if neither of the given values are true', () => {
     expect(none(true, true)).toBe(false);
     expect(none(true, false)).toBe(false);
     expect(none(false, true)).toBe(false);
