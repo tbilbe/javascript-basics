@@ -3,15 +3,20 @@ const negate = (a) => !a;
 const both = (a, b) => a && b;
 
 const either = (a, b) => {
-
+  return a || b;
 }
 
 const none = (a, b) => {
-  // your code here
-};
-
+  return  !a && !b;
+}
 const one = (a, b) => {
-  // your code here
+  if (a && !b) {
+    return true;
+  } else if (!a && b) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 const truthiness = (a) => {
