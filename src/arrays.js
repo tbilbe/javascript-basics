@@ -1,28 +1,25 @@
 const getNthElement = (index, array) => array[index % array.length];
 
-const arrayToCSVString = (array) => {
-  return array.reduce((acc, next) => { return acc + ',' + next }, array[0])
-};
+const arrayToCSVString = (array) => array.join(',');
 
 const csvStringToArray = (string) => string.split(',');
 
-const addToArray = (element, array) => array.push(element);
-
+const addToArray = (element, array) => {
+  array.push(element);
+  return;
+}
 const addToArray2 = (element, array) => {
-  // your code here
+  const newArray = [];
+  array.map((oldArrayIndex) => newArray.push(oldArrayIndex));
+  newArray.push(element);
+  return newArray;
 };
 
-const removeNthElement = (index, array) => {
-  // your code here
-};
+const removeNthElement = (index, array) => array.splice(index, 1);
 
-const numbersToStrings = (numbers) => {
-  // your code here
-};
+const numbersToStrings = (numbers) => numbers.map((num) => num.toString());
 
-const uppercaseWordsInArray = (strings) => {
-  // your code here
-};
+const uppercaseWordsInArray = (strings) => strings.map((string) => string.toUpperCase());
 
 const reverseWordsInArray = (strings) => {
   // your code here
