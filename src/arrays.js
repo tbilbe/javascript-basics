@@ -10,9 +10,9 @@ const addToArray = (element, array) => {
 }
 const addToArray2 = (element, array) => {
   const newArray = [];
-  array.map((oldArrayIndex) => newArray.push(oldArrayIndex));
-  newArray.push(element);
-  return newArray;
+  const test = array.map((oldArrayIndex) => newArray.push(oldArrayIndex));
+  // newArray.push(element);
+  return test;
 };
 
 const removeNthElement = (index, array) => array.splice(index, 1);
