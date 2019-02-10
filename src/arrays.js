@@ -31,11 +31,11 @@ const numbersToStrings = (numbers) => {
 };
 
 const uppercaseWordsInArray = (strings) => {
-  return strings.map( s => s.toUpperCase()) 
+  return strings.map(s => s.toUpperCase());
 };
 
 const reverseWordsInArray = (strings) => {
-  return strings.map( s => s.split("").reverse().join("")) 
+  return strings.map(s => s.split("").reverse().join("")); 
 };
 
 const onlyEven = (numbers) => {
@@ -47,19 +47,26 @@ const removeNthElement2 = (index, array) => {
 };
 
 const elementsStartingWithAVowel = (strings) => {
-  // your code here
+  return strings.filter(string => {
+    return string[0].toLowerCase() === 'a' || string[0].toLowerCase() === 'e' || string[0].toLowerCase() === 'i' || string[0].toLowerCase() === 'o' || string[0].toLowerCase() === 'u';
+  });
 };
 
 const removeSpaces = (string) => {
-  // your code here
+  return string.split(' ').join('');
 };
 
 const sumNumbers = (numbers) => {
-  // your code here
+  return numbers.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+  });
 };
 
 const sortByLastLetter = (strings) => {
-  // your code here
+  // const newArr = strings.map((string) => {
+  //   return string.charAt(string.length - 1);
+  // });
+  // return newArr.sort();
 };
 
 module.exports = {

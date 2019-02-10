@@ -112,7 +112,7 @@ describe('removeNthElement2', () => {
 });
 
 describe('elementsStartingWithAVowel', () => {
-  xit('returns elements starting with a vowel', () => {
+  it('returns elements starting with a vowel', () => {
     expect(elementsStartingWithAVowel([
       'apple', 'bapple', 'capple', 'dapple', 'epple', 'fepple',
       'gepple', 'hepple', 'ipple', 'jipple', 'kipple', 'lipple',
@@ -122,7 +122,7 @@ describe('elementsStartingWithAVowel', () => {
     ])).toEqual(['apple', 'epple', 'ipple', 'opple', 'upple']);
   });
 
-  xit('is case insensitive', () => {
+  it('is case insensitive', () => {
     expect(elementsStartingWithAVowel([
       'Apple', 'Bapple', 'Capple', 'Dapple', 'Epple', 'Fepple',
       'Gepple', 'Hepple', 'Ipple', 'Jipple', 'Kipple', 'Lipple',
@@ -134,14 +134,14 @@ describe('elementsStartingWithAVowel', () => {
 });
 
 describe('removeSpaces', () => {
-  xit('returns the string with the space characters removed', () => {
+  it('returns the string with the space characters removed', () => {
     expect(removeSpaces('this string has spaces')).toEqual('thisstringhasspaces');
     expect(removeSpaces(' this one has sneaky   spaces ')).toEqual('thisonehassneakyspaces');
   });
 });
 
 describe('sumNumbers', () => {
-  xit('returns the sum of the numbers in the array', () => {
+  it('returns the sum of the numbers in the array', () => {
     expect(sumNumbers([1, 3, 5, 6, 2, 8])).toEqual(25);
   });
 });
