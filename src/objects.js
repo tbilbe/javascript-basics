@@ -1,41 +1,42 @@
 const createPerson = (name, age) => {
-  // your code here
-};
+  const person = {}
+  person.name = name;
+  person.age = age;
+  return person;
+}
 
-const getName = (object) => {
-  // your code here
-};
+const getName = (object) => object.name;
 
-const getProperty = (property, object) => {
-  // your code here
-};
+const getProperty = (property, object) => object[property];
 
-const hasProperty = (property, object) => {
-  // your code here
-};
+const hasProperty = (property, object) => object[property] ? true : false;
 
-const isOver65 = (person) => {
-  // your code here
-};
+const isOver65 = (person) => person.age > 65 ? true : false;
 
-const getAges = (people) => {
-  // your code here
-};
+const getAges = (people) => people.map(person => person.age);
 
 const findByName = (name, people) => {
-  // your code here
-};
+  const found = people.filter(person => person.name == name);
+  return found[0]
+}
 
-const findHondas = (cars) => {
-  // your code here
-};
+const findHondas = (cars) =>
+  cars.filter(honda => honda.manufacturer == 'Honda');
 
 const averageAge = (people) => {
-  // your code here
+  const mappedAges = people.map(person => person.age);
+  const totalAges = mappedAges.reduce((acc, next) => (acc += next), 0);
+  return totalAges / mappedAges.length
 };
 
 const createTalkingPerson = (name, age) => {
-  // your code here
+  const person = {};
+  person.name = name;
+  person.age = age;
+  person.introduce = function (name) {
+    return `Hi ${name}, my name is ${person.name} and I am ${person.age}!`
+  }
+  return person
 };
 
 module.exports = {

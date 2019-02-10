@@ -10,9 +10,9 @@ const addToArray = (element, array) => {
 }
 const addToArray2 = (element, array) => {
   const newArray = [];
-  const test = array.map((oldArrayIndex) => newArray.push(oldArrayIndex));
-  // newArray.push(element);
-  return test;
+  array.map((oldArrayIndex) => newArray.push(oldArrayIndex));
+  newArray.push(element);
+  return newArray;
 };
 
 const removeNthElement = (index, array) => array.splice(index, 1);
@@ -21,32 +21,40 @@ const numbersToStrings = (numbers) => numbers.map((num) => num.toString());
 
 const uppercaseWordsInArray = (strings) => strings.map((string) => string.toUpperCase());
 
-const reverseWordsInArray = (strings) => {
-  // your code here
-};
+const reverseWordsInArray = (strings) => strings.map(el => el.split('').reverse().join(''));
 
-const onlyEven = (numbers) => {
-  // your code here
-};
+const onlyEven = (numbers) => numbers.filter(nums => nums % 2 == 0);
 
 const removeNthElement2 = (index, array) => {
-  // your code here
+  const newArray = []
+  for (let i = 0; i < array.length; i++) {
+    if (i != index) {
+      newArray.push(array[i]);
+    }
+  }
+  return newArray;
 };
 
 const elementsStartingWithAVowel = (strings) => {
-  // your code here
+  console.log((strings[0]))
+  const filteredStrings = []
+  // strings.filter(word => word[0] == 'A')
+  for (let i = 0; i < strings.length; i++) {
+    if (strings[i][0] == 'A' || strings[i][0] == 'E' || strings[i][0] == 'I' || strings[i][0] == 'O' || strings[i][0] == 'U') {
+      filteredStrings.push(strings[i])
+    }
+  }
+  return filteredStrings
 };
 
-const removeSpaces = (string) => {
-  // your code here
-};
+const removeSpaces = (string) => string.split(' ').join('');
 
-const sumNumbers = (numbers) => {
-  // your code here
-};
+const sumNumbers = (numbers) => numbers.reduce((acc, next) => { return acc += next }, 0);
 
 const sortByLastLetter = (strings) => {
-  // your code here
+  const first = strings.map(word => word.split(' '))
+  const second = first.reverse();
+  return second;
 };
 
 module.exports = {
