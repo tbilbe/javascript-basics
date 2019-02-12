@@ -19,7 +19,7 @@ const {
 describe('getNthElement', () => {
   const array = ['cat', 'dog', 'elephant', 'fox'];
 
-  xit('returns the element at the given position', () => {
+  it('returns the element at the given position', () => {
     expect(getNthElement(0, array)).toEqual('cat');
     expect(getNthElement(2, array)).toEqual('elephant');
     expect(getNthElement(3, array)).toEqual('fox');
@@ -72,7 +72,7 @@ describe('addToArray2', () => {
 });
 
 describe('removeNthElement', () => {
-  xit('removes the element at position n', () => {
+  it('removes the element at position n', () => {
     const array = ['ant', 'bison', 'cockerel', 'duck', 'elephant'];
     removeNthElement(2, array);
     expect(array).toEqual(['ant', 'bison', 'duck', 'elephant']);
@@ -104,7 +104,7 @@ describe('onlyEven', () => {
 });
 
 describe('removeNthElement2', () => {
-  xit('returns an array with the nth element removed, and does not mutate the original', () => {
+  it('returns an array with the nth element removed, and does not mutate the original', () => {
     const array = ['bike', 'car', 'train', 'bus'];
     expect(removeNthElement2(2, array)).toEqual(['bike', 'car', 'bus']);
     expect(array).toEqual(['bike', 'car', 'train', 'bus']);
@@ -147,7 +147,7 @@ describe('sumNumbers', () => {
 });
 
 describe('sortByLastLetter', () => {
-  xit('sorts the string by the last character', () => {
+  it('sorts the string by the last character', () => {
     expect(sortByLastLetter(['Lannister', 'Stark', 'Greyjoy', 'Targaryen']))
       .toEqual(['Stark', 'Targaryen', 'Lannister', 'Greyjoy']);
   });

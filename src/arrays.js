@@ -1,7 +1,8 @@
 const getNthElement = (index, array) => {
-  // for (let index = 0; index < array.length; index++){
-  //   return array[index];
-  // }
+  // first find the index in the array
+  const newITem = array.findIndex(item => item === array[index]);
+  // return the array[index] item will display the item:
+  return array[newITem];
 };
 
 const arrayToCSVString = (array) => {
@@ -21,8 +22,8 @@ const addToArray2 = (element, array) => {
 };
 
 const removeNthElement = (index, array) => {
-
-  // your code here
+  // splice mutates the original array(second parameter is n of items to remove)
+  return array.splice(index, 1);
 };
 
 const numbersToStrings = (numbers) => {
@@ -35,7 +36,7 @@ const uppercaseWordsInArray = (strings) => {
 };
 
 const reverseWordsInArray = (strings) => {
-  return strings.map(s => s.split("").reverse().join("")); 
+  return strings.map(s => s.split('').reverse().join('')); 
 };
 
 const onlyEven = (numbers) => {
@@ -43,7 +44,7 @@ const onlyEven = (numbers) => {
 };
 
 const removeNthElement2 = (index, array) => {
-  return array.slice(index);
+  return array.filter(item => item !== array[index]);
 };
 
 const elementsStartingWithAVowel = (strings) => {
@@ -63,10 +64,14 @@ const sumNumbers = (numbers) => {
 };
 
 const sortByLastLetter = (strings) => {
-  // const newArr = strings.map((string) => {
-  //   return string.charAt(string.length - 1);
-  // });
-  // return newArr.sort();
+  const newArr = strings.sort((a, b) => {
+    if (a.charAt(a.length - 1) > b.charAt(b.length - 1)) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
+  return newArr;
 };
 
 module.exports = {
