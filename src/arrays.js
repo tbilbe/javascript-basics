@@ -36,15 +36,8 @@ const removeNthElement2 = (index, array) => {
 };
 
 const elementsStartingWithAVowel = (strings) => {
-  console.log((strings[0]))
-  const filteredStrings = []
-  // strings.filter(word => word[0] == 'A')
-  for (let i = 0; i < strings.length; i++) {
-    if (strings[i][0] == 'A' || strings[i][0] == 'E' || strings[i][0] == 'I' || strings[i][0] == 'O' || strings[i][0] == 'U') {
-      filteredStrings.push(strings[i])
-    }
-  }
-  return filteredStrings
+  const filterStrings = strings.split(' ').filter(letter => letter[0].toUpperCase() == 'A' || letter[0].toUpperCase() == 'E' || letter[0].toUpperCase() == 'I' || letter[0].toUpperCase() == 'O' || letter[0].toUpperCase() == 'U')
+  return filterStrings;
 };
 
 const removeSpaces = (string) => string.split(' ').join('');
