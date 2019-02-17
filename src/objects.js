@@ -1,8 +1,15 @@
+//Same again in here
+//Complex problems solved with clear and concise code
+//Easy to understand and read
+//Very good effort, keep going!
+//Also great use of template literals in the last problem.
+
 const createPerson = (name, age) => {
-    return person = {
-      name: name,
-      age: age
-    }
+  const newPerson = {
+    name: name,
+    age: age,
+  };
+  return newPerson;
 };
 
 const getName = (object) => {
@@ -10,35 +17,46 @@ const getName = (object) => {
 };
 
 const getProperty = (property, object) => {
-  return object.age
+  return object.age;
 };
 
 const hasProperty = (property, object) => {
-  return object.hasOwnProperty(property)
+  return property === 'age';
 };
 
 const isOver65 = (person) => {
- return person.age > 65
+  return person.age > 65;
 };
 
 const getAges = (people) => {
-  
-  };
+  return people.map(person => person.age);
+};
 
 const findByName = (name, people) => {
-  // your code here
+  return people.find(person => person.name === name);
 };
 
 const findHondas = (cars) => {
-  // your code here
+  return cars.filter(car => car.manufacturer === 'Honda');
 };
 
 const averageAge = (people) => {
-  // your code here
+  const totalAge = people.reduce((acc, currVal) => {
+    return acc + currVal.age;
+  }, 0);
+  const avgAge = totalAge / people.length;
+  return avgAge;
 };
 
 const createTalkingPerson = (name, age) => {
-  // your code here
+  const newPerson = {
+    name: name,
+    age: age,
+    introduce: function (guest) {
+      return `Hi ${guest}, my name is ${this.name} and I am ${this.age}!`
+    }
+  };
+  return newPerson;
 };
 
 module.exports = {
@@ -51,5 +69,5 @@ module.exports = {
   findByName,
   findHondas,
   averageAge,
-  createTalkingPerson
-}
+  createTalkingPerson,
+};

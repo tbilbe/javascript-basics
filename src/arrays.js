@@ -1,72 +1,81 @@
+//Really good effort on these. Arrays can be solved in many different ways
+//You've used clear and concise code which is easy to read and understand
+//Well done!
+
 const getNthElement = (index, array) => {
-if (index > array.length -1) {
-  return array[index % array.length]
-} else { return array[index]}
+  // first find the index in the array
+  const newITem = array.findIndex(item => item === array[index]);
+  // return the array[index] item will display the item:
+  return array[newITem];
 };
 
 const arrayToCSVString = (array) => {
-  return array.toString()
+  return array.join();
 };
 
 const csvStringToArray = (string) => {
-  return string.split(',')
+  return string.split(',');
 };
 
 const addToArray = (element, array) => {
-   array.push(element)
+  array.push(element);
 };
 
 const addToArray2 = (element, array) => {
-  return newArray2 = array.concat(element);
+  return array.concat(element);
 };
 
 const removeNthElement = (index, array) => {
-  array.splice(index, 1);
+  // splice mutates the original array(second parameter is n of items to remove)
+  return array.splice(index, 1);
 };
 
 const numbersToStrings = (numbers) => {
-  return numbers.map(strings => strings.toString());
+  // use constructor String
+  return numbers.map(String);
 };
 
 const uppercaseWordsInArray = (strings) => {
-  return strings.map(uppercase => uppercase.toUpperCase());
+  return strings.map(s => s.toUpperCase());
 };
 
 const reverseWordsInArray = (strings) => {
-    return strings.map(reversed => reversed.split("").reverse().join(""));
+  return strings.map(s => s.split('').reverse().join(''));
 };
 
 const onlyEven = (numbers) => {
-    return numbers.filter(number => number % 2 === 0 )
+  return numbers.filter(n => n % 2 === 0);
 };
 
 const removeNthElement2 = (index, array) => {
-  return array.filter(arrFil => arrFil !== array[index]);
+  return array.filter(item => item !== array[index]);
 };
 
 const elementsStartingWithAVowel = (strings) => {
-    return strings.filter(arrFil => arrFil.charAt(0) === 'a' ||
-    arrFil.charAt(0) === 'e' || arrFil.charAt(0) === 'i' || 
-    arrFil.charAt(0) === 'o' || arrFil.charAt(0) === 'u' || 
-    arrFil.charAt(0) === 'A' || arrFil.charAt(0) === 'E' || 
-    arrFil.charAt(0) === 'I' || arrFil.charAt(0) === 'O' ||
-    arrFil.charAt(0) === 'U')
-  };
+  return strings.filter(string => {
+    return string[0].toLowerCase() === 'a' || string[0].toLowerCase() === 'e' || string[0].toLowerCase() === 'i' || string[0].toLowerCase() === 'o' || string[0].toLowerCase() === 'u';
+  });
+};
 
 const removeSpaces = (string) => {
-    return string.replace(/\s/g,'');
-  
+  return string.split(' ').join('');
 };
 
 const sumNumbers = (numbers) => {
-      return numbers.reduce(function(total,curVal) {
-       return  total + curVal;
-     })
+  return numbers.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+  });
 };
 
 const sortByLastLetter = (strings) => {
-    return strings.sort((cur,next) => cur.charCodeAt(cur.length-1) -
-    next.charCodeAt(next.length-1));
+  const newArr = strings.sort((a, b) => {
+    if (a.charAt(a.length - 1) > b.charAt(b.length - 1)) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
+  return newArr;
 };
 
 module.exports = {
@@ -84,5 +93,5 @@ module.exports = {
   elementsStartingWithAVowel,
   removeSpaces,
   sumNumbers,
-  sortByLastLetter
-}
+  sortByLastLetter,
+};

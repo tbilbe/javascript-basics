@@ -8,9 +8,15 @@ const {
 } = require('../src/strings');
 
 describe('sayHello', () => {
-  it('returns Hello with the given string!', () => {
-    expect(sayHello('MCR Codes')).toEqual('Hello, MCR Codes!');
+  it('returns "Hello world!" when passed "world"', () => {
     expect(sayHello('world')).toEqual('Hello, world!');
+  });
+
+  it('returns "Hello MCR Codes!" when passed "MCR Codes"', () => {
+    expect(sayHello('MCR Codes')).toEqual('Hello, MCR Codes!');
+  });
+
+  it('returns "Hello fsghjdfkhgf!" when passed "fsghjdfkhgf"', () => {
     expect(sayHello('fsghjdfkhgf')).toEqual('Hello, fsghjdfkhgf!');
   });
 });
@@ -48,8 +54,11 @@ describe('firstCharacter', () => {
 });
 
 describe('firstCharacters', () => {
-  it('returns the first n characters of the string', () => {
+  it('returns the first 4 characters of the string', () => {
     expect(firstCharacters('sd32fg45', 4)).toEqual('sd32');
+  });
+
+  it('returns the first 2 characters of the string', () => {
     expect(firstCharacters('asd', 2)).toEqual('as');
   });
 });

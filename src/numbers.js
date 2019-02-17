@@ -1,5 +1,5 @@
 const add = (a, b) => {
-  return a + b;
+  return a + b
 };
 
 const subtract = (a, b) => {
@@ -14,12 +14,14 @@ const divide = (a, b) => {
   return a / b
 };
 
+//Could have used Math.pow here. ** doesn't work in Internet Explorer
+//Something to be mindful of in future.
 const power = (a, b) => {
   return a ** b
 };
 
 const round = (a) => {
-return Math.round(a)
+  return Math.round(a)
 };
 
 const roundUp = (a) => {
@@ -34,15 +36,16 @@ const absolute = (a) => {
   return Math.abs(a)
 };
 
+//Could have used Math.trunc here also.
 const quotient = (a, b) => {
- const result = a / b;
- if (result >= 0) {return Math.floor(result)
-} else {return Math.ceil(result) }
+  return parseInt(a / b)
 };
 
 const remainder = (a, b) => {
   return a % b
 };
+
+//Well done, good use of methods throughout.
 
 module.exports = {
   add,
@@ -55,5 +58,5 @@ module.exports = {
   roundDown,
   absolute,
   quotient,
-  remainder
-}
+  remainder,
+};
