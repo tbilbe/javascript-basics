@@ -2,6 +2,12 @@
 //You've used clear and concise code which is easy to read and understand
 //Well done!
 
+
+//You missed an 'x' on one of the tests for this problem and unfortunately
+//the code doesn't pass.
+//Go back over it and double check every thing is working as it should be
+//it returns undefined instead of cat in the second test.
+
 const getNthElement = (index, array) => {
   // first find the index in the array
   const newITem = array.findIndex(item => item === array[index]);
