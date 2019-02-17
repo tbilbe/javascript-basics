@@ -44,6 +44,7 @@ const isLessThanOrEqualTo = (a, b) => {
 const isOdd = (a) => {
   const oddNum = a % 2;
   if (oddNum !== 0) {
+
     return true;
   } else {
     return false;
@@ -56,6 +57,7 @@ const isOdd = (a) => {
 const isEven = (a) => {
   const eveNum = a % 2;
   if (eveNum === 0) {
+
     return true;
   } else {
     return false;
@@ -88,12 +90,13 @@ const startsWith = (char, string) => {
 const containsVowels = (string) => {
   const vowels = ['a', 'e', 'i', 'o', 'u'];
 
-  for (let i = 0; i < vowels.length; i++) {
-    if (string.toLowerCase().includes(vowels[i])) {
-      return true;
-    }
+
+    for (let i = 0; i < vowels.length; i++) { 
+      if ( string.toLowerCase().includes(vowels[i]) ) {
+        return true;
+      }
   }
-  return false;
+    return false;
 };
 
 //This passes the test but the code is incorrect.
