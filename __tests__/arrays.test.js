@@ -112,7 +112,7 @@ describe('removeNthElement2', () => {
 });
 
 describe('elementsStartingWithAVowel', () => {
-  xit('returns elements starting with a vowel', () => {
+  it('returns elements starting with a vowel', () => {
     expect(elementsStartingWithAVowel([
       'apple', 'bapple', 'capple', 'dapple', 'epple', 'fepple',
       'gepple', 'hepple', 'ipple', 'jipple', 'kipple', 'lipple',
@@ -122,7 +122,7 @@ describe('elementsStartingWithAVowel', () => {
     ])).toEqual(['apple', 'epple', 'ipple', 'opple', 'upple']);
   });
 
-  xit('is case insensitive', () => {
+  it('is case insensitive', () => {
     expect(elementsStartingWithAVowel([
       'Apple', 'Bapple', 'Capple', 'Dapple', 'Epple', 'Fepple',
       'Gepple', 'Hepple', 'Ipple', 'Jipple', 'Kipple', 'Lipple',

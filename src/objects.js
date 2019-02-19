@@ -1,9 +1,14 @@
+// Very good code written in here
+// Clear and concise making it very easy to understand
+// Also great use of template literals on the final problem
+// Well done!
+
 const createPerson = (name, age) => {
-  const person = {}
+  const person = {};
   person.name = name;
   person.age = age;
   return person;
-}
+};
 
 const getName = (object) => object.name;
 
@@ -17,16 +22,16 @@ const getAges = (people) => people.map(person => person.age);
 
 const findByName = (name, people) => {
   const found = people.filter(person => person.name == name);
-  return found[0]
-}
+  return found[0];
+};
 
-const findHondas = (cars) =>
-  cars.filter(honda => honda.manufacturer == 'Honda');
+const findHondas = (cars) => cars.filter(honda => honda.manufacturer == 'Honda');
+
 
 const averageAge = (people) => {
   const mappedAges = people.map(person => person.age);
   const totalAges = mappedAges.reduce((acc, next) => (acc += next), 0);
-  return totalAges / mappedAges.length
+  return totalAges / mappedAges.length;
 };
 
 const createTalkingPerson = (name, age) => {
@@ -34,8 +39,9 @@ const createTalkingPerson = (name, age) => {
     name: name,
     age: age,
     introduce: function (name) {
-      return `Hi ${name}, my name is ${person.name} and I am ${person.age}!`
-    }
+      return `Hi ${name}, my name is ${person.name} and I am ${person.age}!`;
+    },
+
   };
   return person;
 };
