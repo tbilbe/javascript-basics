@@ -1,63 +1,47 @@
-//Same again in here
-//Complex problems solved with clear and concise code
-//Easy to understand and read
-//Very good effort, keep going!
-//Also great use of template literals in the last problem.
+// Very good code written in here
+// Clear and concise making it very easy to understand
+// Also great use of template literals on the final problem
+// Well done!
 
 const createPerson = (name, age) => {
-  const newPerson = {
-    name: name,
-    age: age,
-  };
-  return newPerson;
+  const person = {};
+  person.name = name;
+  person.age = age;
+  return person;
 };
 
-const getName = (object) => {
-  return object.name;
-};
+const getName = (object) => object.name;
 
-const getProperty = (property, object) => {
-  return object.age;
-};
+const getProperty = (property, object) => object[property];
 
-const hasProperty = (property, object) => {
-  return property === 'age';
-};
+const hasProperty = (property, object) => object[property] ? true : false;
 
-const isOver65 = (person) => {
-  return person.age > 65;
-};
+const isOver65 = (person) => person.age > 65 ? true : false;
 
-const getAges = (people) => {
-  return people.map(person => person.age);
-};
+const getAges = (people) => people.map(person => person.age);
 
 const findByName = (name, people) => {
-  return people.find(person => person.name === name);
+  const found = people.filter(person => person.name == name);
+  return found[0];
 };
 
-const findHondas = (cars) => {
-  return cars.filter(car => car.manufacturer === 'Honda');
-};
+const findHondas = (cars) => cars.filter(honda => honda.manufacturer == 'Honda');
 
 const averageAge = (people) => {
-  const totalAge = people.reduce((acc, currVal) => {
-    return acc + currVal.age;
-  }, 0);
-  const avgAge = totalAge / people.length;
-  return avgAge;
+  const mappedAges = people.map(person => person.age);
+  const totalAges = mappedAges.reduce((acc, next) => (acc += next), 0);
+  return totalAges / mappedAges.length;
 };
 
 const createTalkingPerson = (name, age) => {
-  const newPerson = {
+  const person = {
     name: name,
     age: age,
-
-    introduce: function(guest) {
-      return  `Hi ${guest}, my name is ${this.name} and I am ${this.age}!`
-    }
+    introduce: function (name) {
+      return `Hi ${name}, my name is ${person.name} and I am ${person.age}!`;
+    },
   };
-  return newPerson;
+  return person;
 };
 
 module.exports = {

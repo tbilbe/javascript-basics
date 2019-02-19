@@ -1,36 +1,24 @@
-//Well done! Could have also used template literals here to make things more concise.
-// return ´Hello, ${string}!´
+// The use of .toString is unnecessary here as string already contains a string
+// also could have used template literal's
+
 const sayHello = (string) => {
-  return 'Hello, ' + string + '!'
+  return `Hello, ${ string.toString() }!`;
 };
 
-//Well done
-const uppercase = (string) => {
+// Well done
+const uppercase = (string) => string.toUpperCase();
 
-  return string.toUpperCase()
-};
+// Well done
+const lowercase = (string) => string.toLowerCase();
 
-//Well done
-const lowercase = (string) => {
-  return string.toLowerCase()
-};
+// Well done
+const countCharacters = (string) => string.length;
 
-//Well done
-const countCharacters = (string) => {
-  return string.length
-};
+// Code works fine but you could have used the method .charAt(0) instead
+const firstCharacter = (string) => string[0];
 
-//Well done
-const firstCharacter = (string) => {
-  return string.charAt(0)
-};
-
-//Well done
-const firstCharacters = (string, n) => {
-  return string.substring(string, n)
-};
-
-//Extremely well done on all these. Used the best methods for all.
+// Well done
+const firstCharacters = (string, n) => string.substr(0, n);
 
 module.exports = {
   sayHello,

@@ -1,123 +1,100 @@
-//Good effort on all of these. Good usage of methods and clear and concise code.
+// Well done
+const negate = (a) => !a;
 
-const negate = (a) => {
-  return !a;
-};
+// Well done
+const both = (a, b) => a && b;
 
-const both = (a, b) => {
-  return a && b;
-};
-
+// Well done
 const either = (a, b) => {
   return a || b;
 };
 
+// Well done
 const none = (a, b) => {
   return !a && !b;
 };
 
+// Well done
 const one = (a, b) => {
-  return a !== b;
-};
-
-const truthiness = (a) => {
-  return a ? true : false;
-};
-
-const isEqual = (a, b) => {
-  return a === b;
-};
-
-const isGreaterThan = (a, b) => {
-  return a > b;
-};
-
-const isLessThanOrEqualTo = (a, b) => {
-  return a <= b;
-};
-
-//An if else statement isn't really necessary here as when you ask the function to check
-//if the number is not equal to 0, it will return as true or false anyway
-//the following code would have sufficed:
-//   return (a % 2) === 1
-
-const isOdd = (a) => {
-  const oddNum = a % 2;
-  if (oddNum !== 0) {
-
+  if (a && !b) {
     return true;
-  } else {
-    return false;
   }
-};
-
-//Same as above, except equal to 0 this time for even numbers:
-//   return (a % 2) === 0
-
-const isEven = (a) => {
-  const eveNum = a % 2;
-  if (eveNum === 0) {
-
+  if (!a && b) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 };
 
-//Same again:
-// return Math.sqrt(a) % 1 === 0
+// Well done
+const truthiness = (a) => a ? true : false;
 
+// Well done
+const isEqual = (a, b) => a === b;
+
+// Well done
+const isGreaterThan = (a, b) => a > b;
+
+// Well done
+const isLessThanOrEqualTo = (a, b) => a <= b;
+
+// Well done
+const isOdd = (a) => a % 2 === 1;
+
+// Well done
+const isEven = (a) => a % 2 === 0;
+
+// Works fine but was expecting Math.sqrt(a) here
 const isSquare = (a) => {
-  if (Math.sqrt(a) % 1 === 0) {
-    return true;
-  } else {
-    return false;
-  }
+  return Math.sqrt(a) % 1 === 0;
+
+  // let total;
+  // let iterator = 0;
+  // do {
+  //   total = iterator ** 2;
+  //   iterator++;
+  //   if (total === a) {
+  //     return true;
+  //   }
+  // } while (total < a);
+  // return false;
 };
 
-//Slightly over complicated this one, could have used a different method but very good effort.
-// return string.startsWith(char);
+// Good job, could have used string.charAt(char) here though
+const startsWith = (char, string) => string[0] === char;
 
-const startsWith = (char, string) => {
-  return string.charAt(0) === char;
-};
-
-//This one was hard for a lot of people but you've done very well here.
-//A simpler way to complete this one would be:
+// You've done well here but could have used a regex method instead.
 //   return string.toLowerCase().match(/[a,e,i,o,u]/) ? true : false
-// This incorporates regex to check the letters.
-
 const containsVowels = (string) => {
   const vowels = ['a', 'e', 'i', 'o', 'u'];
-
-
-    for (let i = 0; i < vowels.length; i++) { 
-      if ( string.toLowerCase().includes(vowels[i]) ) {
+  for (let i = 0; i < string.length; i++) {
+    for (let n = 0; n < vowels.length; n++) {
+      if (string[i].toLowerCase() === vowels[n]) {
         return true;
       }
+    }
   }
-    return false;
+  return false;
 };
 
-//This passes the test but the code is incorrect.
-//The code will always pass the test as you've asked it to turn it into lowercase before running
-//which isn't the intention of the test.
-//the test should check for lowercase of capitals and fail if a capital is present
-//The best way to solve this one is using regex again:
+// This is a good effort but it's the equivalent of taking a rocket on your commute
+// to work when the bus will do.
+// I'm impressed it works so you've done well.
+// However, I would have opted for a slightly less over stated regex method:
 //   return string.match(/[A-Z]/g) ? false : true
+// Less moving parts and less scope for issues down the line.
+// Well done though!
 
 const isLowerCase = (string) => {
-  //this will return true;
-  return string === string.toLowerCase();
-
-  //the below is too much:
-  // if (string === string.toLowerCase()) {
-  //   return true;
-  // } else {
-  //   return false;
-  // }
+  for (let i = 0; i < string.length; i++) {
+    // console.log(string.charCodeAt(1);
+    if (string.charCodeAt(i) > 64 && string.charCodeAt(i) < 91) {
+      return false;
+    }
+  }
+  return true;
 };
 
+// isLowerCase('Abc')
 module.exports = {
   negate,
   both,
