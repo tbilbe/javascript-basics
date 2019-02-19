@@ -41,6 +41,7 @@ const onlyEven = (numbers) => numbers.filter(nums => nums % 2 == 0);
 // return array.filter(x => x !== array[index]);
 const removeNthElement2 = (index, array) => {
   const newArray = [];
+
   for (let i = 0; i < array.length; i++) {
     if (i != index) {
       newArray.push(array[i]);

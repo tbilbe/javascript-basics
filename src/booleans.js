@@ -45,7 +45,7 @@ const isEven = (a) => a % 2 === 0;
 
 // Works fine but was expecting Math.sqrt(a) here
 const isSquare = (a) => {
-  return Math.sqrt(a) % 1 === 0;
+return Math.sqrt(a) % 1 === 0;
 
   // let total;
   // let iterator = 0;
@@ -66,6 +66,7 @@ const startsWith = (char, string) => string[0] === char;
 //   return string.toLowerCase().match(/[a,e,i,o,u]/) ? true : false
 const containsVowels = (string) => {
   const vowels = ['a', 'e', 'i', 'o', 'u'];
+
   for (let i = 0; i < string.length; i++) {
     for (let n = 0; n < vowels.length; n++) {
       if (string[i].toLowerCase() === vowels[n]) {
@@ -83,10 +84,10 @@ const containsVowels = (string) => {
 //   return string.match(/[A-Z]/g) ? false : true
 // Less moving parts and less scope for issues down the line.
 // Well done though!
-
 const isLowerCase = (string) => {
   for (let i = 0; i < string.length; i++) {
     // console.log(string.charCodeAt(1);
+
     if (string.charCodeAt(i) > 64 && string.charCodeAt(i) < 91) {
       return false;
     }
@@ -95,6 +96,7 @@ const isLowerCase = (string) => {
 };
 
 // isLowerCase('Abc')
+
 module.exports = {
   negate,
   both,

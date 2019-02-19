@@ -27,6 +27,7 @@ const findByName = (name, people) => {
 
 const findHondas = (cars) => cars.filter(honda => honda.manufacturer == 'Honda');
 
+
 const averageAge = (people) => {
   const mappedAges = people.map(person => person.age);
   const totalAges = mappedAges.reduce((acc, next) => (acc += next), 0);
@@ -40,6 +41,7 @@ const createTalkingPerson = (name, age) => {
     introduce: function (name) {
       return `Hi ${name}, my name is ${person.name} and I am ${person.age}!`;
     },
+
   };
   return person;
 };
