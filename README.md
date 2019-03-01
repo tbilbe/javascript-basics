@@ -1,6 +1,6 @@
 # JavaScript Basics
 
-The repository contains test cases and empty function definitions which need to be populated to solve the different challenges set in this weeks walkthrough.
+this is the first part of the mcr codes course -> running through how to use array methods :D
 
 ## Getting started
 
